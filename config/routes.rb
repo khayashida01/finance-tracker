@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "user/registrations"}
   root 'welcome#index'
   get 'my_portfolio' => 'users#my_portfolio'
   get 'search_stocks' => 'stocks#search'
   resources :user_stocks, only: [:create, :destroy]
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
