@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   
-<<<<<<< HEAD
   devise_for :users, :controllers => {:registrations => "user/registrations"}
-=======
-  devise_for :users, :controllers => { :registrations => "user/registrations"}
->>>>>>> 2abd69c6bc6136800a187329d4621b331cafdb94
+  
   root 'welcome#index'
   get 'my_portfolio' => 'users#my_portfolio'
   get 'search_stocks' => 'stocks#search'
